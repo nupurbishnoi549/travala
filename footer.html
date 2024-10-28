@@ -26,6 +26,11 @@
                                 '2xl': "1536px",
                             },
                         },
+                        fontFamily: {
+                            "volkhov-sans": ["Volkhov"],
+                            "montserrat-sans": ["Montserrat"],
+                            "inter-sans": ["Inter", 'sans-serif'],
+                        },
                         fontSize: {
                             "custom-xl": "64px",
                             "custom-2xl": "80px",
@@ -34,17 +39,23 @@
                             "blue": "#0C111F",
                             "light-white": "#F7F7F7",
                             "orange": "#E97458",
-                            "off-white": "#E6E8EE",
                         },
                         lineHeight: {
-                            "custom-base": "110%",
+                            "custom-base": "130%",
                             "custom-lg": "120%",
-                            "custom-xl": "150%",
+                            "custom-xl": "180%",
                         },
                         gradientColors: {
                             'custom-gradient-purple': 'linear-gradient(135deg, #8482FF 0%, #7723FE 100%)',
                             'custom-gradient-yellow': 'linear-gradient(135deg, #F9EC7D 0%, #F5B100 100%)',
                         },
+                        boxshadow: {
+                            'box-shadow': '0px 100px 80px 0px #00000005',
+                        },
+                        grayscale: {
+                            '50': '0.5',
+                        },
+
                     },
                 },
             };
@@ -53,6 +64,163 @@
     </head>
 
     <body>
+        <!-------------------------experience----------------------->
+        <section class="lg:pt-12 md:pt-11 sm:pt-10 pt-9 lg:pb-8 md:pb-11 sm:pb-10 pb-3">
+            <div class="container">
+                <div class="lg:flex justify-between items-center">
+                    <div class="lg:w-5/12 w-full">
+                        <h2
+                            class="font-inter-sans font-bold xl:text-5xl lg:text-[40px] md:text-[35px] sm:text-3xl text-3xl !leading-custom-lg text-black">
+                            Get Experience Which are fun</h2>
+                        <p
+                            class="font-inter-sans font-normal lg:text-xl md:text-lg text-base sm:!leading-custom-xl !leading-custom-base opacity-60 lg:py-6 md:py-5 py-4">
+                            With travala you can get the best experience on holiday travel, and we always update the
+                            latest and best destinations in
+                            the world</p>
+                        <div class="relative">
+                            <div>
+                                <img src="assets/images/png/lake-boat.png" alt="lake-boat" class="pointer-events-none">
+                            </div>
+                            <div class="absolute -z-10 bottom-[-2%]">
+                                <img src="assets/images/png/lake-boat-layer.png" alt="lake-boat-layer">
+                            </div>
+                            <div
+                                class=" absolute flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-[6px] rounded-full text-white text-sm top-[6%] left-[6%]">
+                                <img src="assets/images/svg/location.svg" alt="location">
+                                <span>Turkey</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <div
+                            class="sm:flex gap-8 xl:pb-9 lg:pb-7 md:pb-6 sm:pb-5 pb-3 xl:mb-9 lg:mb-7 md:mb-6 sm:mb-5 mb-3 border-b-2 border-[#F7F7F7]">
+                            <img src="assets/images/svg/price.svg" alt="price"
+                                class="pb-3 sm:pb-0 sm:size-[90px] size-20">
+                            <div class="flex-col">
+                                <h3 class="font-bold font-montserrat-sans md:text-2xl text-xl leading-custom-lg pb-4">
+                                    Affordable prices</h3>
+                                <p
+                                    class="font-inter-sans font-normal md:text-xl text-lg leading-custom-xl text-black opacity-60">
+                                    We provide some very affordable prices compared to others.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="sm:flex gap-8 xl:pb-9 lg:pb-7 md:pb-6 sm:pb-5 pb-3 xl:mb-9 lg:mb-7 md:mb-6 sm:mb-5 mb-3 border-b-2 border-[#F7F7F7]">
+                            <img src="assets/images/svg/people.svg" alt="people"
+                                class="pb-3 sm:pb-0 sm:size-[90px] size-20">
+                            <div class="flex-col">
+                                <h3 class="font-bold font-montserrat-sans md:text-2xl text-xl leading-custom-lg pb-4">
+                                    Unforgettable experience</h3>
+                                <p
+                                    class="font-inter-sans font-normal md:text-xl text-lg leading-custom-xl text-black opacity-60">
+                                    We provide a vacation experience that will be unforgettable.</p>
+                            </div>
+                        </div>
+                        <div class="sm:flex sm:justify-start justify-center gap-8 xl:pb-9 lg:pb-7 md:pb-6 sm:pb-5 pb-3">
+                            <img src="assets/images/svg/heart.svg" alt="heart"
+                                class="pb-3 sm:pb-0 sm:size-[90px] size-20">
+                            <div class="flex-col">
+                                <h3 class="font-bold font-montserrat-sans md:text-2xl text-xl leading-custom-lg pb-4">
+                                    Very Friendly Service</h3>
+                                <p
+                                    class="font-inter-sans font-normal md:text-xl text-lg leading-custom-xl text-black opacity-60">
+                                    We will provide excellent and friendly service for the sake of our customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------brandname section------------------------->
+        <section class="lg:pb-12 md:pb-11 sm:pb-10 pb-9">
+            <div class="container">
+                <div
+                    class="flex flex-wrap xl:gap-4 lg:gap-12 md:gap-10 gap-0 items-center max-w-[1073px] mx-auto justify-center">
+                    <div
+                        class="bg-white sm:px-6 sm:py-8 px-3 py-4 hover:shadow-[0_4px_4px_rgba(0,0,0,0.1)] hover:shadow-b rounded-xl grayscale hover:grayscale-0">
+                        <a href="#"><img src="assets/images/png/axon.png" alt="axon"
+                                class=" md:w-[130px] sm:w-[110px] w-[90px]"></a>
+                    </div>
+                    <div
+                        class="bg-white sm:px-6 sm:py-8 px-3 py-4  hover:shadow-[0_4px_4px_rgba(0,0,0,0.1)] hover:shadow-b rounded-xl grayscale hover:grayscale-0">
+                        <a href="#"> <img src="assets/images/png/jetstar.png" alt="jetstar"
+                                class=" md:w-[172px] sm:w-[110px] w-[90px]"></a>
+                    </div>
+                    <div
+                        class="bg-white sm:px-6 sm:py-8 px-3 py-4  hover:shadow-[0_4px_4px_rgba(0,0,0,0.1)] hover:shadow-b rounded-xl grayscale hover:grayscale-0">
+                        <a href="#"><img src="assets/images/png/expedia.png" alt="expedia"
+                                class=" md:w-[162px] sm:w-[110px] w-[90px]"></a>
+                    </div>
+                    <div
+                        class="bg-white sm:px-6 sm:py-8 px-3 py-4  hover:shadow-[0_4px_4px_rgba(0,0,0,0.1)] hover:shadow-b rounded-xl grayscale hover:grayscale-0">
+                        <a href="#"><img src="assets/images/png/quantas.png" alt="quantas"
+                                class=" md:w-[162px] sm:w-[110px] w-[90px]"></a>
+                    </div>
+                    <div
+                        class="bg-white sm:px-6 sm:py-8 px-3 py-4  hover:shadow-[0_4px_4px_rgba(0,0,0,0.1)] hover:shadow-b rounded-xl grayscale hover:grayscale-0">
+                        <a href="#"><img src="assets/images/png/litalia.png" alt="litalia"
+                                class="md:w-[94px] sm:w-[110px] w-[90px]"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-----------------------------footer section---------------------->
+        <footer class="">
+            <div class="container">
+                <div class="mx-auto flex flex-wrap justify-between md:gap-8 sm:gap-7 gap-6">
+                    <div class="flex-col">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex items-center font-inter-sans justify-center w-12 h-12 rounded-full bg-gray-200 text-gray-700 font-black text-lg">
+                                T
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-inter-sans font-extrabold text-gray-900 tracking-wider">Travala
+                                </h4>
+                            </div>
+                        </div>
+                        <p class="text-black opacity-60 max-w-[412px] !leading-custom-xl pt-4 font-inter-sans font-normal text-base">
+                            With Travala, you can experience new travel and the best tourist destinations that we have
+                            to offer.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 class="text-base font-inter-sans font-bold text-gray-900 sm:mb-5 md:mb-3">Destination</h5>
+                        <ul class="text-gray-500 space-y-1">
+                            <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm">Cappadocia</a></li>
+                            <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm">Sossusvlei</a></li>
+                            <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm">Albuquerque</a></li>
+                        </ul>
+                    </div>                  
+                        <div>
+                            <h5 class="text-base font-inter-sans font-bold text-gray-900 sm:mb-5 md:mb-3">About</h5>
+                            <ul class="text-gray-500 space-y-1">
+                                <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm">Contact Us</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm">Testimonials</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm">Rating</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="text-base font-inter-sans font-bold text-gray-900 sm:mb-5 md:mb-3">Follow Us</h5>
+                            <ul class="text-gray-500  gap-4">
+                                <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm flex gap-4 group"><img src="assets/images/svg/facebook.svg" alt="facebook" class="group-hover:scale-125 duration-500 transition-all">Facebook</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm flex gap-4 group"><img src="assets/images/svg/twitter.svg" alt="twitter" class="group-hover:scale-125 duration-500 transition-all">Twitter</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-orange duration-500 transition-all leading-[28px] mb-2 font-normal font-montserrat-sans text-sm flex gap-4 group"><img src="assets/images/svg/insta.svg" alt="instagram" class="group-hover:scale-125 duration-500 transition-all">Instagram</a></li>
+                            </ul>
+                        </div>                   
+                </div>
+                <div class="md:mt-28 sm:mt-5 mt-4 text-black opacity-50 text-sm sm:flex  justify-between">
+                    <p class="font-normal font-inter-sans md:text-base text-sm sm:text-left text-center">Copyright &copy; Travala 2021</p>
+                    <div class="flex sm:justify-end justify-center gap-4 lg:pb-10 md:pb-8 sm:pb-6 pb-5 sm:text-right text-center sm:mt-0 mt-3">
+                        <a href="#" class="text-black font-normal font-inter-sans md:text-base text-sm">Terms & Conditions</a>
+                        <a href="#" class="text-black font-normal font-inter-sans md:text-base text-sm sm:text-right text-center">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!--------------------------swiper script link------------------------------->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
