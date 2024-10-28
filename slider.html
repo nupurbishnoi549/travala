@@ -39,6 +39,7 @@
                         "blue": "#0C111F",
                         "light-white": "#F7F7F7",
                         "orange": "#E97458",
+                        "off-white": "#E6E8EE",
                     },
                     lineHeight: {
                         "custom-base": "110%",
@@ -57,7 +58,23 @@
 </head>
 
 <body>
-
+    <section>
+        <div class="container">
+            <h2 class="font-bold max-w-[280px] text-5xl">DestinationsMost Popular</h2>
+            <p class="font-normal">Some of the most popular destinations for
+                you visit with a view the beautiful one.</p>
+        </div>
+    </section>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
     <!--------------------------swiper script link------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!------------------------js link--------------------------->
