@@ -58,10 +58,19 @@
 
 <body>
     <!----------------HERO SECTION------->
-    <section class="bg-blue lg:pb-14 pb-9 min-h-screen bg-[url(assets/images/png/bg-layer.png)]">
+    <section class="bg-blue lg:pb-14 pb-9 lg:min-h-screen bg-[url(assets/images/png/bg-layer.png)]">
         <div class="container">
             <nav class="flex justify-between items-center xl:pt-11 lg:pt-9 md:pt-7 pt-5 pb-4">
-                <a href="#"><img src="assets/images/png/logo.png" alt="logo" class="w-[142px] h-[50px]"></a>
+                <a href="#"><div class="flex items-center gap-4">
+                    <div
+                        class="flex items-center font-inter-sans justify-center w-12 h-12 rounded-full bg-gray-800 text-white font-black text-lg">
+                        T
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-inter-sans font-extrabold text-white tracking-wider">Travala
+                        </h4>
+                    </div>
+                </div></a>
                 <div class="lg:hidden pt-2">
                     <button id="menu-btn" class="text-white focus:outline-none z-40 relative lg:pr-4">
                         <svg id="hamburger-icon" class="w-9 h-9" fill="black" stroke="currentColor" viewBox="0 0 24 24"
@@ -194,7 +203,7 @@
                 </div>
                 <div class="flex max-sm:justify-center max-sm:pt-5">
                     <img src="assets/images/png/hero-girl.png" alt="girl"
-                        class="xl:w-[550px] lg:w-[500px] md:w-[400px] sm:w-[350px] w-[280px]">
+                        class="xl:w-[550px] lg:w-[500px] md:w-[400px] sm:w-[350px] w-[280px] pointer-events-none">
                 </div>
             </div>
         </div>
@@ -221,8 +230,8 @@
                     </button>
                 </div>
                 <div class="flex relative max-sm:pt-7">
-                    <img src="assets/images/png/mountain-img.png" alt="mountain-img" class="w-[493px] z-10">
-                    <img src="assets/images/png/mountain-shadow.png" alt="shadow" class="absolute md:top-[9%] top-[4%] max-sm:right-[6%]">
+                    <img src="assets/images/png/mountain-img.png" alt="mountain-img" class="w-[493px] z-10 pointer-events-none">
+                    <img src="assets/images/png/mountain-shadow.png" alt="shadow" class="absolute md:top-[9%] top-[4%] max-sm:right-[6%] pointer-events-none">
                 </div>
             </div>  
     
