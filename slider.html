@@ -26,6 +26,11 @@
                             '2xl': "1536px",
                         },
                     },
+                    fontFamily: {
+                        "volkhov-sans": ["Volkhov"],
+                        "montserrat-sans": ["Montserrat"],
+                        "inter-sans": ["Inter", 'sans-serif'],
+                    },
                     fontSize: {
                         "custom-xl": "64px",
                         "custom-2xl": "80px",
@@ -53,7 +58,25 @@
 </head>
 
 <body>
-
+    <section>
+        <div class="container">
+           <div class="flex">
+            <h2 class="font-bold max-w-[280px] text-5xl">DestinationsMost Popular</h2>
+            <p class="font-normal">Some of the most popular destinations for
+                you visit with a view the beautiful one.</p>
+           </div>
+        </div>
+    </section>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
     <!--------------------------swiper script link------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!------------------------js link--------------------------->
