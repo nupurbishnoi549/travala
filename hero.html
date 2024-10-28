@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travala</title>
+    <!---------------custom css link------------------------>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!---------------------------swiper link--------------------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!---------------------------------tailwind link-------------------->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: {
+                        center: true,
+                        padding: "20px",
+                        screens: {
+                            sm: "575px",
+                            md: "768px",
+                            lg: "1024px",
+                            xl: "1140px",
+                            '2xl': "1536px",
+                        },
+                    },
+                    fontSize: {
+                        "custom-xl": "64px",
+                        "custom-2xl": "80px",
+                    },
+                    colors: {
+                        "blue": "#0C111F",
+                        "light-white": "#F7F7F7",
+                        "orange": "#E97458",
+                        "off-white": "#E6E8EE",
+                    },
+                    lineHeight: {
+                        "custom-base": "110%",
+                        "custom-lg": "120%",
+                        "custom-xl": "150%",
+                    },
+                    gradientColors: {
+                        'custom-gradient-purple': 'linear-gradient(135deg, #8482FF 0%, #7723FE 100%)',
+                        'custom-gradient-yellow': 'linear-gradient(135deg, #F9EC7D 0%, #F5B100 100%)',
+                    },
+                },
+            },
+        };
+    </script>
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <nav class="flex justify-between items-center">
+                <a href="#"><img src="assets/images/webp/logo.png" alt="logo" class="md:w-60 w-44"></a>
+                <div class="lg:hidden pt-2">
+                    <button id="menu-btn" class="text-white focus:outline-none z-40 relative lg:pr-4">
+                        <svg id="hamburger-icon" class="w-9 h-9" fill="black" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16">
+                            </path>
+                        </svg>
+                        <svg id="close-icon" class="hidden w-9 h-9" fill="black" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="lg:flex hidden xl:space-x-4 space-x-0 bg-off-white p-2 rounded-full items-center">
+                    <li class=" rounded-full active">
+                        <a href="#hero"
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black hover:border-black border-off-white border">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black focus:outline-none hover:border-black border-off-white border">About</a>
+                    </li>
+                    <li class="relative">
+                        <a href=""
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black flex items-center gap-1 focus:outline-none hover:border-black border-off-white border">Buy
+                        </a>
+                    </li>
+                    <li class="relative">
+                        <a href=""
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black border-off-white border">Destination</a>
+                    </li>
+                    <li class="relative">
+                        <a href=""
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black border-off-white border">Contact</a>
+                    </li>
+                </ul>
+                <div class=" rounded-full p-2 lg:flex hidden justify-center items-center gap-10 relative max-w-[230px]">
+                    <input type="checkbox" id="toggle" class="hidden peer">
+                    <span
+                        class="absolute inset-y-0 left-0 peer-checked:w-[54%] w-[40%] m-2 bg-green rounded-full transition-all duration-300 peer-checked:left-[90px]"></span>
+                    <label for="toggle"
+                        class="font-medium font-sofia-sans text-lg leading-custom-lg relative z-10 flex-1 py-3 pl-8 text-center cursor-pointer text-black transition duration-300 peer-checked:text-white w-[54%]">
+                        Login
+                    </label>
+                    <label for="toggle"
+                        class="font-medium font-sofia-sans text-lg leading-custom-lg relative z-10 flex-1 pr-7 flex justify-center py-2 text-center cursor-pointer text-white transition duration-300 peer-checked:text-black whitespace-nowrap w-[115px]">
+                        Get started
+                    </label>
+                </div>
+                <div id="mobile-menu"
+                    class="hidden fixed inset-0 z-30 bg-green text-white flex flex-col items-center justify-center space-y-6 text-xl">
+                    <ul class="p-2 rounded-full items-center justify-start flex flex-col gap-4 ">
+                        <li class=" rounded-full active">
+                            <a href="#hero"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black hover:border-black border-off-white border">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black focus:outline-none hover:border-black border-off-white border">About</a>
+                        </li>
+                        <li class="relative">
+                            <a href=""
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex items-center gap-1 focus:outline-none hover:border-black border-off-white border">Buy
+                            </a>
+                        </li>
+                        <li class="relative">
+                            <a href=""
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black border-off-white border">Destination</a>
+                        </li>
+                        <li class="relative">
+                            <a href=""
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black border-off-white border">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!--------------------------swiper script link------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!------------------------js link--------------------------->
+    <!-- <script src="./assets/js/app.js"></script> -->
+    <script src="./assets/JS/hero.js"></script>
+</body>
+
+</html>
