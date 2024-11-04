@@ -38,6 +38,10 @@ $('.slick-vertical').slick({
     verticalSwiping: true,
     prevArrow: $('.custom-prev-vertical'),
     nextArrow: $('.custom-next-vertical'),
+    autoplay: true,                // Enable autoplay
+    autoplaySpeed: 2000,           // Set autoplay speed in milliseconds (2 seconds)
+    speed: 500,                    // Adjust speed of the transition (optional)
+    cssEase: 'linear',             // Smooth transition effect
     responsive: [
         {
             breakpoint: 480,
@@ -48,3 +52,4 @@ $('.slick-vertical').slick({
         }
     ]
 });
+
