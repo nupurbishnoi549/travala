@@ -8,7 +8,13 @@
     <!---------------custom css link------------------------>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!---------------------------swiper link--------------------------------->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!---------------------------------tailwind link-------------------->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -55,206 +61,448 @@
         };
     </script>
     <style>
+        .slick-initialized .slick-slide {
+            margin-left: 16px;
+        }
+
+        .slick-list {
+            padding-top: 50px;
+        }
+
+        .slick-vertical .box {
+            margin-bottom: 90px;
+        }
     </style>
+
 </head>
 
 <body>
-    <section class="pb-10">
+    <!-- <section id="destinations" class="pb-10 pt-10 relative">
         <div class="container px-3">
-            <div class="flex">
-                <h2 class="font-bold max-w-[332px] text-5xl">Destinations Most Popular</h2>
-                <p class="font-normal max-w-[470px] text-xl">Some of the most popular destinations for
-                    you visit with a view the beautiful one.</p>
+            <div class="flex justify-between">
+                <div class="flex">
+                    <h2 class="font-bold max-w-[332px] text-5xl">Destinations Most Popular</h2>
+                    <p class="font-normal max-w-[470px] text-xl">Some of the most popular destinations for
+                        you visit with a view the beautiful one.</p>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="swiper-button-prev border-[10px] border-[#F5F5F5] rounded-full size-[67px] flex items-center justify-center absolute top-[10%] left-[75%]">
+                        <img src="./assets/images/svg/arrow.svg" alt="arrow">
+                    </div>
+                    <div
+                        class="swiper-button-next border-[10px] border-[#F5F5F5] rounded-full size-[67px] flex items-center justify-center absolute top-[10%] right-[14%]">
+                        <img src="./assets/images/svg/right-arrow.svg" alt="right-arrow">
+                    </div>
+                </div>
             </div>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="flex mt-14 gap-6">
-                        <div class="bg-light-white max-w-[354px] rounded-[30px] relative swiper-slide">
-                            <img src="./assets/images/png/beach-img.png" alt=""
-                                class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
-                            <div class="absolute top-[7%]">
-                                <img src="./assets/images/png/card-bg-layer.png" alt="" class="w-full rounded-[30px]">
-                            </div>
-                            <div class="flex">
-                                <div
-                                    class="backdrop-blur-[20px] shadow-[0px_14px_30.5px_0px_#1B33531F] z-10 max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
-                                    <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
-                                        <img src="./assets/images/svg/star.svg" alt="">
-                                    </div>
-                                    <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">5.0</p>
+
+                <div class="flex mt-14 card-slider">
+                    <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                        <img src="./assets/images/png/beach-img.png" alt="beach-img"
+                            class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
+                        <div class="absolute top-[7%]">
+                            <img src="./assets/images/png/card-bg-layer.png" alt="" class="w-full rounded-[30px]">
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="backdrop-blur-[20px] shadow-[0px_14px_30.5px_0px_#1B33531F] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
+                                <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
+                                    <img src="./assets/images/svg/star.svg" alt="star">
                                 </div>
-                                <div
-                                    class="backdrop-blur-lg max-w-[112px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
-                                    <img src="./assets/images/svg/location.svg" alt="" class="py-3 pl-3">
-                                    <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Turkey</p>
-                                </div>
+                                <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">5.0</p>
                             </div>
-                            <div class="absolute top-[21%] right-[40%] size-[84px] z-30">
-                                <img src="./assets/images/png/icon-img.png" alt="">
-                            </div>
-                            <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
-                                <h2 class="font-bold text-2xl">Cappadocia</h2>
-                                <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
-                                    The red and orange sand of the desert are very beautiful, let's take a trip here
-                                </p>
-                            </div>
-                            <div class="flex pt-3 px-5 pb-6 justify-between relative z-10 items-center">
-                                <div class="flex-col">
-                                    <p class="font-normal text-lg text-[#0C111F99]">Price</p>
-                                    <p class="font-bold text-2xl">$ 150<span
-                                            class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
-                                </div>
-                                <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
-                                    Ticket booking
-                                </button>
+                            <div
+                                class="backdrop-blur-lg max-w-[112px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
+                                <img src="./assets/images/svg/location.svg" alt="location" class="py-3 pl-3">
+                                <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Turkey</p>
                             </div>
                         </div>
-                        <div class="bg-light-white max-w-[354px] rounded-[30px] relative swiper-slide">
-                            <img src="./assets/images/png/baloon-img.png" alt=""
-                                class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
-                            <div class="absolute top-[7%]">
-                                <img src="./assets/images/png/ballon-bg-layer.png" alt="" class="w-full rounded-[30px]">
+                        <div class="absolute top-[21%] right-[40%] size-[84px] z-30">
+                            <img src="./assets/images/png/icon-img.png" alt="icon-img">
+                        </div>
+                        <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
+                            <h2 class="font-bold text-2xl">Cappadocia</h2>
+                            <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
+                                The red and orange sand of the desert are very beautiful, let's take a trip here
+                            </p>
+                        </div>
+                        <div class="flex pt-3 px-5 pb-6 justify-between relative z-10 items-center">
+                            <div class="flex-col">
+                                <p class="font-normal text-lg text-[#0C111F99]">Price</p>
+                                <p class="font-bold text-2xl">$ 150<span
+                                        class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
                             </div>
-                            <div class="flex">
-                                <div
-                                    class="backdrop-blur-[20px] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
-                                    <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
-                                        <img src="./assets/images/svg/star.svg" alt="">
-                                    </div>
-                                    <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">4.5</p>
+                            <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
+                                Ticket booking
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                        <img src="./assets/images/png/baloon-img.png" alt="balloons"
+                            class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
+                        <div class="absolute top-[7%]">
+                            <img src="./assets/images/png/ballon-bg-layer.png" alt="ballon-bg-layer"
+                                class="w-full rounded-[30px]">
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="backdrop-blur-[20px] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
+                                <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
+                                    <img src="./assets/images/svg/star.svg" alt="star">
                                 </div>
-                                <div
-                                    class="backdrop-blur-lg max-w-[125px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
-                                    <img src="./assets/images/svg/location.svg" alt="" class="py-3 pl-3">
-                                    <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Namibia</p>
-                                </div>
+                                <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">4.5</p>
                             </div>
-                            <div class="absolute top-[21%] right-[40%] size-[84px]">
-                                <img src="./assets/images/png/icon-img.png" alt="">
-                            </div>
-                            <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
-                                <h2 class="font-bold text-2xl">Sossusvlei</h2>
-                                <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
-                                    famous for its hot air balloons and we can see its natural beauty from above
-                                </p>
-                            </div>
-                            <div class="flex pt-3 px-5 pb-6 justify-between relative items-center">
-                                <div class="flex-col">
-                                    <p class="font-normal text-lg text-[#0C111F99]">Price</p>
-                                    <p class="font-bold text-2xl">$ 200<span
-                                            class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
-                                </div>
-                                <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
-                                    Ticket booking
-                                </button>
+                            <div
+                                class="backdrop-blur-lg max-w-[125px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
+                                <img src="./assets/images/svg/location.svg" alt="location" class="py-3 pl-3">
+                                <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Namibia</p>
                             </div>
                         </div>
-                        <div class="bg-light-white max-w-[354px] rounded-[30px] relative swiper-slide">
-                            <img src="./assets/images/png/road-img.png" alt=""
-                                class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
-                            <div class="absolute top-[7%]">
-                                <img src="./assets/images/png/road-bg-layer.png" alt="" class="w-full rounded-[30px]">
+                        <div class="absolute top-[21%] right-[40%] size-[84px]">
+                            <img src="./assets/images/png/icon-img.png" alt="icon-img">
+                        </div>
+                        <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
+                            <h2 class="font-bold text-2xl">Sossusvlei</h2>
+                            <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
+                                famous for its hot air balloons and we can see its natural beauty from above
+                            </p>
+                        </div>
+                        <div class="flex pt-3 px-5 pb-6 justify-between relative items-center">
+                            <div class="flex-col">
+                                <p class="font-normal text-lg text-[#0C111F99]">Price</p>
+                                <p class="font-bold text-2xl">$ 200<span
+                                        class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
                             </div>
-                            <div class="flex">
-                                <div
-                                    class="backdrop-blur-[20px] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
-                                    <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
-                                        <img src="./assets/images/svg/star.svg" alt="">
-                                    </div>
-                                    <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">4.5</p>
+                            <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
+                                Ticket booking
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                        <img src="./assets/images/png/road-img.png" alt="road-img"
+                            class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
+                        <div class="absolute top-[7%]">
+                            <img src="./assets/images/png/road-bg-layer.png" alt="road-bg-layer"
+                                class="w-full rounded-[30px]">
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="backdrop-blur-[20px] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
+                                <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
+                                    <img src="./assets/images/svg/star.svg" alt="star">
                                 </div>
-                                <div
-                                    class="backdrop-blur-lg max-w-[161px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
-                                    <img src="./assets/images/svg/location.svg" alt="" class="py-3 pl-3">
-                                    <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">New Mexico</p>
-                                </div>
+                                <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">4.5</p>
                             </div>
-                            <div class="absolute top-[21%] right-[40%] size-[84px]">
-                                <img src="./assets/images/png/icon-img.png" alt="">
-                            </div>
-                            <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
-                                <h2 class="font-bold text-2xl">Albuquerque</h2>
-                                <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
-                                    a cool trip because the various scenery around will be very eye-catching
-                                </p>
-                            </div>
-                            <div class="flex pt-3 px-5 pb-6 justify-between relative items-center">
-                                <div class="flex-col">
-                                    <p class="font-normal text-lg text-[#0C111F99]">Price</p>
-                                    <p class="font-bold text-2xl">$ 180<span
-                                            class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
-                                </div>
-                                <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
-                                    Ticket booking
-                                </button>
+                            <div
+                                class="backdrop-blur-lg max-w-[161px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
+                                <img src="./assets/images/svg/location.svg" alt="location" class="py-3 pl-3">
+                                <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">New Mexico</p>
                             </div>
                         </div>
-                        <div class="bg-light-white max-w-[354px] rounded-[30px] relative swiper-slide">
-                            <img src="./assets/images/png/beach-img.png" alt=""
-                                class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
-                            <div class="absolute top-0 z-0">
-                                <img src="./assets/images/png/card-bg-layer.png" alt="" class="w-full rounded-[30px]">
+                        <div class="absolute top-[21%] right-[40%] size-[84px]">
+                            <img src="./assets/images/png/icon-img.png" alt="icon-img">
+                        </div>
+                        <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
+                            <h2 class="font-bold text-2xl">Albuquerque</h2>
+                            <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
+                                a cool trip because various scenery around will be very eye-catching
+                            </p>
+                        </div>
+                        <div class="flex pt-3 px-5 pb-6 justify-between relative items-center">
+                            <div class="flex-col">
+                                <p class="font-normal text-lg text-[#0C111F99]">Price</p>
+                                <p class="font-bold text-2xl">$ 180<span
+                                        class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
                             </div>
-                            <div class="flex">
-                                <div
-                                    class="backdrop-blur-[20px] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
-                                    <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
-                                        <img src="./assets/images/svg/star.svg" alt="">
-                                    </div>
-                                    <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">5.0</p>
+                            <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
+                                Ticket booking
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                        <img src="./assets/images/png/beach-img.png" alt="beach-img"
+                            class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
+                        <div class="absolute top-[7%]">
+                            <img src="./assets/images/png/card-bg-layer.png" alt="" class="w-full rounded-[30px]">
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="backdrop-blur-[20px] shadow-[0px_14px_30.5px_0px_#1B33531F] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
+                                <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
+                                    <img src="./assets/images/svg/star.svg" alt="star">
                                 </div>
-                                <div
-                                    class="backdrop-blur-lg max-w-[112px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
-                                    <img src="./assets/images/svg/location.svg" alt="" class="py-3 pl-3">
-                                    <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Turkey</p>
-                                </div>
+                                <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">5.0</p>
                             </div>
-                            <div class="absolute top-[21%] right-[40%] size-[84px] z-30">
-                                <img src="./assets/images/png/icon-img.png" alt="">
-                            </div>
-                            <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px] relative">
-                                <h2 class="font-bold text-2xl">Cappadocia</h2>
-                                <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
-                                    The red and orange sand of the desert are very beautiful, let's take a trip here
-                                </p>
-                            </div>
-                            <div class="flex pt-3 px-5 pb-6 justify-between relative z-10 items-center">
-                                <div class="flex-col">
-                                    <p class="font-normal text-lg text-[#0C111F99]">Price</p>
-                                    <p class="font-bold text-2xl">$ 150<span
-                                            class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
-                                </div>
-                                <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
-                                    Ticket booking
-                                </button>
+                            <div
+                                class="backdrop-blur-lg max-w-[112px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
+                                <img src="./assets/images/svg/location.svg" alt="location" class="py-3 pl-3">
+                                <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Turkey</p>
                             </div>
                         </div>
+                        <div class="absolute top-[21%] right-[40%] size-[84px] z-30">
+                            <img src="./assets/images/png/icon-img.png" alt="icon-img">
+                        </div>
+                        <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
+                            <h2 class="font-bold text-2xl">Cappadocia</h2>
+                            <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
+                                The red and orange sand of the desert are very beautiful, let's take a trip here
+                            </p>
+                        </div>
+                        <div class="flex pt-3 px-5 pb-6 justify-between relative z-10 items-center">
+                            <div class="flex-col">
+                                <p class="font-normal text-lg text-[#0C111F99]">Price</p>
+                                <p class="font-bold text-2xl">$ 150<span
+                                        class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
+                            </div>
+                            <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
+                                Ticket booking
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section> -->
+    <section class="pb-10 pt-10 relative">
+        <div class="container px-3">
+            <div class="flex justify-between">
+                <div class="flex">
+                    <h2 class="font-bold max-w-[332px] text-5xl">Destinations Most Popular</h2>
+                    <p class="font-normal max-w-[470px] text-xl">Some of the most popular destinations for
+                        you visit with a view the beautiful one.</p>
+                </div>
+                <div class="flex gap-3">
+                    <div
+                        class="swiper-button-prev custom-prev border-[10px] border-[#F5F5F5] rounded-full w-[67px] h-[67px] flex items-center justify-center absolute top-[10%] left-[75%]">
+                        <img src="./assets/images/svg/arrow.svg" alt="arrow">
+                    </div>
+                    <div
+                        class="swiper-button-next custom-next border-[10px] border-[#F5F5F5] rounded-full w-[67px] h-[67px] flex items-center justify-center absolute top-[10%] right-[14%]">
+                        <img src="./assets/images/svg/right-arrow.svg" alt="right-arrow">
+                    </div>
+                </div>
+                <div class="slick-Card">
+                </div>
+            </div>
+            <div class="slick-Card flex mt-4">
+                <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                    <img src="./assets/images/png/beach-img.png" alt="beach-img"
+                        class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
+                    <div class="absolute top-[7%]">
+                        <img src="./assets/images/png/card-bg-layer.png" alt="" class="w-full rounded-[30px]">
+                    </div>
+                    <div class="flex">
+                        <div
+                            class="backdrop-blur-[20px] shadow-[0px_14px_30.5px_0px_#1B33531F] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
+                            <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
+                                <img src="./assets/images/svg/star.svg" alt="star">
+                            </div>
+                            <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">5.0</p>
+                        </div>
+                        <div
+                            class="backdrop-blur-lg max-w-[112px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
+                            <img src="./assets/images/svg/location.svg" alt="location" class="py-3 pl-3">
+                            <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Turkey</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-[21%] right-[40%] size-[84px] z-30">
+                        <img src="./assets/images/png/icon-img.png" alt="icon-img">
+                    </div>
+                    <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
+                        <h2 class="font-bold text-2xl">Cappadocia</h2>
+                        <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
+                            The red and orange sand of the desert are very beautiful, let's take a trip here
+                        </p>
+                    </div>
+                    <div class="flex pt-3 px-5 pb-6 justify-between relative z-10 items-center">
+                        <div class="flex-col">
+                            <p class="font-normal text-lg text-[#0C111F99]">Price</p>
+                            <p class="font-bold text-2xl">$ 150<span
+                                    class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
+                        </div>
+                        <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
+                            Ticket booking
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                    <img src="./assets/images/png/baloon-img.png" alt="balloons"
+                        class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
+                    <div class="absolute top-[7%]">
+                        <img src="./assets/images/png/ballon-bg-layer.png" alt="ballon-bg-layer"
+                            class="w-full rounded-[30px]">
+                    </div>
+                    <div class="flex">
+                        <div
+                            class="backdrop-blur-[20px] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
+                            <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
+                                <img src="./assets/images/svg/star.svg" alt="star">
+                            </div>
+                            <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">4.5</p>
+                        </div>
+                        <div
+                            class="backdrop-blur-lg max-w-[125px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
+                            <img src="./assets/images/svg/location.svg" alt="location" class="py-3 pl-3">
+                            <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Namibia</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-[21%] right-[40%] size-[84px] z-30">
+                        <img src="./assets/images/png/icon2-img.png" alt="icon-img">
+                    </div>
+                    <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
+                        <h2 class="font-bold text-2xl">Sossusvlei</h2>
+                        <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
+                            famous for its hot air balloons and we can see its natural beauty from above
+                        </p>
+                    </div>
+                    <div class="flex pt-3 px-5 pb-6 justify-between relative items-center">
+                        <div class="flex-col">
+                            <p class="font-normal text-lg text-[#0C111F99]">Price</p>
+                            <p class="font-bold text-2xl">$ 200<span
+                                    class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
+                        </div>
+                        <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
+                            Ticket booking
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                    <img src="./assets/images/png/road-img.png" alt="road-img"
+                        class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
+                    <div class="absolute top-[7%]">
+                        <img src="./assets/images/png/road-bg-layer.png" alt="road-bg-layer"
+                            class="w-full rounded-[30px]">
+                    </div>
+                    <div class="flex">
+                        <div
+                            class="backdrop-blur-[20px] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
+                            <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
+                                <img src="./assets/images/svg/star.svg" alt="star">
+                            </div>
+                            <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">4.5</p>
+                        </div>
+                        <div
+                            class="backdrop-blur-lg max-w-[161px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
+                            <img src="./assets/images/svg/location.svg" alt="location" class="py-3 pl-3">
+                            <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">New Mexico</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-[21%] right-[40%] size-[84px] z-30">
+                        <img src="./assets/images/png/icon3-img.png" alt="icon-img">
+                    </div>
+                    <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
+                        <h2 class="font-bold text-2xl">Albuquerque</h2>
+                        <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
+                            a cool trip because various scenery around will be very eye-catching
+                        </p>
+                    </div>
+                    <div class="flex pt-3 px-5 pb-6 justify-between relative items-center">
+                        <div class="flex-col">
+                            <p class="font-normal text-lg text-[#0C111F99]">Price</p>
+                            <p class="font-bold text-2xl">$ 180<span
+                                    class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
+                        </div>
+                        <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
+                            Ticket booking
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                    <img src="./assets/images/png/beach-img.png" alt="beach-img"
+                        class="max-w-[354px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
+                    <div class="absolute top-[7%]">
+                        <img src="./assets/images/png/card-bg-layer.png" alt="" class="w-full rounded-[30px]">
+                    </div>
+                    <div class="flex">
+                        <div
+                            class="backdrop-blur-[20px] shadow-[0px_14px_30.5px_0px_#1B33531F] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
+                            <div class="bg-custom-gradient-yellow p-2 rounded-full my-[6px] ml-2">
+                                <img src="./assets/images/svg/star.svg" alt="star">
+                            </div>
+                            <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">5.0</p>
+                        </div>
+                        <div
+                            class="backdrop-blur-lg max-w-[112px] flex rounded-[46px] absolute top-[4%] right-[6%] gap-2 z-20">
+                            <img src="./assets/images/svg/location.svg" alt="location" class="py-3 pl-3">
+                            <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px]">Turkey</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-[21%] right-[40%] size-[84px] z-30">
+                        <img src="./assets/images/png/icon-img.png" alt="icon-img">
+                    </div>
+                    <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
+                        <h2 class="font-bold text-2xl">Cappadocia</h2>
+                        <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
+                            The red and orange sand of the desert are very beautiful, let's take a trip here
+                        </p>
+                    </div>
+                    <div class="flex pt-3 px-5 pb-6 justify-between relative z-10 items-center">
+                        <div class="flex-col">
+                            <p class="font-normal text-lg text-[#0C111F99]">Price</p>
+                            <p class="font-bold text-2xl">$ 150<span
+                                    class="font-normal text-lg text-[#0C111F99]">/Person</span></p>
+                        </div>
+                        <button class="bg-custom-gradient-purple py-2 px-5 rounded-[45px] text-white h-[43px]">
+                            Ticket booking
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-light-white pt-20 pb-10">
+
+    <section id="testimonials" class="bg-light-white pt-16 pb-10 overflow-hidden relative">
         <div class="container">
+            <div class="flex gap-3">
+                <div
+                    class="swiper-button-prev custom-prev-vertical bg-white rounded-full w-[67px] h-[67px] flex items-center justify-center absolute top-[40%] left-[6%]">
+                    <img src="./assets/images/svg/top.svg" alt="arrow">
+                </div>
+                <div
+                    class="swiper-button-next custom-next-vertical bg-white rounded-full w-[67px] h-[67px] flex items-center justify-center absolute bottom-[23%] left-[6%]">
+                    <img src="./assets/images/svg/bottom.svg" alt="right-arrow">
+                </div>
+            </div>
+
             <div class="flex gap-24">
-                <div class="w-[555px] bg-white relative rounded-[20px] pl-6">
-                    <div class="border-[12px] border-white absolute top-[-20%] rounded-[40px] left-[7%]">
-                        <img src="./assets/images/png/boy-img.png" alt="" class="size-[63px]">
+                <div class="slick-vertical !w-[558px] h-[302px]">
+                    <div class="w-[555px] box bg-white relative rounded-[20px] pl-6">
+                        <div class="border-[12px] border-white absolute top-[-20%] rounded-[40px] left-[7%]">
+                            <img src="./assets/images/png/boy-img.png" alt="" class="size-[63px]">
+                        </div>
+                        <h2 class="pt-14 font-bold text-2xl !leading-7">Jhone Lown</h2>
+                        <div class="flex pt-3 gap-1">
+                            <img src="./assets/images/svg/five-star.svg" alt="">
+                            <img src="./assets/images/svg/five-star.svg" alt="">
+                            <img src="./assets/images/svg/five-star.svg" alt="">
+                            <img src="./assets/images/svg/five-star.svg" alt="">
+                            <img src="./assets/images/svg/light-star.svg" alt="">
+                        </div>
+                        <p class="max-w-[482px] font-normal text-lg !leading-8 text-[#0C111F] pt-3 pb-14">“A
+                            very pleasant
+                            experience, plus the service is very friendly, recommended for those who want to
+                            try!”</p>
                     </div>
-                    <h2 class="pt-14 font-bold text-2xl !leading-7">Jhone Lown</h2>
-                    <div class="flex pt-3 gap-1">
-                        <img src="./assets/images/svg/five-star.svg" alt="">
-                        <img src="./assets/images/svg/five-star.svg" alt="">
-                        <img src="./assets/images/svg/five-star.svg" alt="">
-                        <img src="./assets/images/svg/five-star.svg" alt="">
-                        <img src="./assets/images/svg/light-star.svg" alt="">
+                    <div class="w-[555px] box bg-white relative rounded-[20px] pl-6">
+                        <div class="border-[12px] border-white absolute top-[-20%] rounded-[40px] left-[7%]">
+                            <img src="./assets/images/png/boy-img.png" alt="" class="size-[63px]">
+                        </div>
+                        <h2 class="pt-14 font-bold text-2xl !leading-7">Jhone Lown</h2>
+                        <div class="flex pt-3 gap-1">
+                            <img src="./assets/images/svg/five-star.svg" alt="">
+                            <img src="./assets/images/svg/five-star.svg" alt="">
+                            <img src="./assets/images/svg/five-star.svg" alt="">
+                            <img src="./assets/images/svg/five-star.svg" alt="">
+                            <img src="./assets/images/svg/light-star.svg" alt="">
+                        </div>
+                        <p class="max-w-[482px] font-normal text-lg !leading-8 text-[#0C111F] pt-3 pb-14">“A
+                            very pleasant
+                            experience, plus the service is very friendly, recommended for those who want to
+                            try!”</p>
                     </div>
-                    <p class="max-w-[482px] font-normal text-lg !leading-8 text-[#0C111F] pt-3 pb-14">“A very pleasant
-                        experience, plus the service is very friendly, recommended for those who want to
-                        try!”</p>
                 </div>
                 <div class="flex-col">
-                    <h2 class="font-bold text-5xl text-[#0C111F] max-w-[522px] !leading-custom-lg">Testimonials
+                    <h2 class="font-bold text-5xl text-[#0C111F] max-w-[522px] !leading-custom-lg pt-14">Testimonials
                         Travala Customers</h2>
                     <p class="text-xl font-normal max-w-[435px] pt-6 leading-9">What our customers have to say about our
                         service, check below!</p>
@@ -262,19 +510,16 @@
             </div>
         </div>
     </section>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
     <!--------------------------swiper script link------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!------------------------js link--------------------------->
+    <script src="./assets/JS/slider.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 
