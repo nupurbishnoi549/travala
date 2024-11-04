@@ -367,14 +367,17 @@
                     </div>
                     <div class="flex gap-3">
                         <div
-                            class="swiper-button-prev custom-prev border-[10px] border-[#F5F5F5] rounded-full w-[67px] h-[67px] flex items-center justify-center absolute xl:top-[10%] lg:top-[15%] md:top-[23%] top-[22%] left-[29%] lg:left-[75%] md:left-[68%]">
-                            <img src="./assets/images/svg/arrow.svg" alt="arrow">
+                            class="swiper-button-prev custom-prev border-[10px] border-[#F5F5F5] rounded-full w-[67px] h-[67px] flex items-center justify-center absolute xl:top-[10%] lg:top-[15%] md:top-[23%] top-[22%] left-[29%] lg:left-[75%] md:left-[68%] cursor-pointer group transition-all duration-300 hover:bg-gradient-to-br hover:from-gray-800 hover:to-black">
+                            <img src="./assets/images/svg/arrow.svg" alt="arrow" class="group-hover:hidden">
+                            <img src="./assets/images/svg/bottom-white.svg" alt="arrow-white" class="hidden group-hover:block">
                         </div>
                         <div
-                            class="swiper-button-next custom-next border-[10px] border-[#F5F5F5] rounded-full w-[67px] h-[67px] flex items-center justify-center absolute xl:top-[10%] lg:top-[15%]  md:top-[23%] top-[22%] lg:right-[10%] md:right-[12%] right-[30%] xl:right-[14%]">
-                            <img src="./assets/images/svg/right-arrow.svg" alt="right-arrow">
+                            class="swiper-button-next custom-next border-[10px] border-[#F5F5F5] rounded-full w-[67px] h-[67px] flex items-center justify-center absolute xl:top-[10%] lg:top-[15%] md:top-[23%] top-[22%] lg:right-[10%] md:right-[12%] right-[30%] xl:right-[14%] cursor-pointer group transition-all duration-300 hover:bg-gradient-to-br hover:from-gray-800 hover:to-black">
+                            <img src="./assets/images/svg/right-arrow.svg" alt="right-arrow" class="group-hover:hidden">
+                            <img src="./assets/images/svg/top-white.svg" alt="right-arrow-white" class="hidden group-hover:block">
                         </div>
                     </div>
+
                 </div>
                 <div class="slick-Card flex mt-4 xl:pt-16 pt-12">
                     <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
@@ -486,7 +489,7 @@
                         <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
                             <h2 class="font-bold text-2xl">Albuquerque</h2>
                             <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99]">
-                                a cool trip because various scenery around will be very eye-catching
+                                a cool trip because the various scenery around will be very eye-catching
                             </p>
                         </div>
                         <div class="flex pt-3 px-5 pb-6 justify-between relative items-center">
@@ -587,14 +590,17 @@
             <div class="container">
                 <div class="flex gap-3 max-md:hidden">
                     <div
-                        class="swiper-button-prev custom-prev-vertical bg-white rounded-full w-[67px] h-[67px] flex items-center justify-center absolute top-[50%] lg:top-[40%] left-[6%]">
-                        <img src="./assets/images/svg/top.svg" alt="arrow">
+                        class="swiper-button-prev custom-prev-vertical bg-white rounded-full w-[67px] h-[67px] flex items-center justify-center absolute top-[50%] lg:top-[40%] left-[6%] cursor-pointer group transition-colors duration-300 hover:bg-black hover:text-white">
+                        <img src="./assets/images/svg/top.svg" alt="arrow" class="group-hover:hidden">
+                        <img src="./assets/images/svg/right-white.svg" alt="arrow-white" class="hidden group-hover:block">
                     </div>
                     <div
-                        class="swiper-button-next custom-next-vertical bg-white rounded-full w-[67px] h-[67px] flex items-center justify-center absolute bottom-[19%] lg:bottom-[23%] left-[6%]">
-                        <img src="./assets/images/svg/bottom.svg" alt="right-arrow">
+                        class="swiper-button-next custom-next-vertical bg-white rounded-full w-[67px] h-[67px] flex items-center justify-center absolute bottom-[19%] lg:bottom-[23%] left-[6%] cursor-pointer group transition-colors duration-300 hover:bg-black hover:text-white">
+                        <img src="./assets/images/svg/bottom.svg" alt="right-arrow" class="group-hover:hidden">
+                        <img src="./assets/images/svg/left-white.svg" alt="right-arrow-white" class="hidden group-hover:block">
                     </div>
                 </div>
+
                 <div class="flex-col lg:hidden block">
                     <h2
                         class="font-bold xl:text-5xl lg:text-[40px] md:text-[35px] sm:text-3xl text-3xl text-[#0C111F] max-w-[522px] !leading-custom-lg lg:pt-14">
@@ -740,6 +746,16 @@
                             Policy</a>
                     </div>
                 </div>
+            </div>
+            <div
+                class="top-btn md:size-14 sm:size-10 size-9 rounded-full fixed bottom-7 right-7 bg-darkblue z-20 p-2 bg-custom-gradient-purple cursor-pointer flex justify-center items-center transition scroll-smooth">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="white" class="bi bi-chevron-double-up"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z" />
+                    <path fill-rule="evenodd"
+                        d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+                </svg>
             </div>
         </footer>
         <!--------------------------slider script link------------------------------->

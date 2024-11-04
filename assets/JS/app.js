@@ -88,3 +88,25 @@ $('.slick-vertical').slick({
     ]
 });
 
+// back-to-top-button
+const mybutton = document.querySelector(".top-btn");
+const heroSection = document.getElementById("hero");
+
+window.addEventListener("scroll", function () {
+    const heroHeight = heroSection.offsetHeight;
+    if (window.scrollY > 1000) {
+        mybutton.classList.remove("hidden");
+        mybutton.classList.add("active");
+    } else {
+        mybutton.classList.add("hidden");
+        mybutton.classList.remove("active");
+    }
+});
+mybutton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
