@@ -92,9 +92,14 @@ $('.slick-vertical').slick({
 const mybutton = document.querySelector(".top-btn");
 const heroSection = document.getElementById("hero");
 
+// Initially hide the button
+mybutton.classList.add("hidden");
+
 window.addEventListener("scroll", function () {
     const heroHeight = heroSection.offsetHeight;
-    if (window.scrollY > 1000) {
+
+    // Show the button only after scrolling past the hero section
+    if (window.scrollY > heroHeight) {
         mybutton.classList.remove("hidden");
         mybutton.classList.add("active");
     } else {
@@ -102,11 +107,13 @@ window.addEventListener("scroll", function () {
         mybutton.classList.remove("active");
     }
 });
+
 mybutton.addEventListener("click", function () {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 });
+
 
 
