@@ -78,5 +78,8 @@ mybutton.addEventListener("click", function () {
     });
 });
 
+// current year
+document.getElementById("year").textContent = new Date().getFullYear();
+
 
 

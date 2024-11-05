@@ -8,7 +8,7 @@
         <!---------------custom css link------------------------>
         <link rel="stylesheet" href="./assets/css/style.css" />
         <!---------------------favicon--------------------------->
-        <link rel="shortcut icon" href="assets/images/webp/fav.webp" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/images/webp/fav.png" type="image/x-icon">
         <!---------------------------slider link--------------------------------->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
             integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
@@ -357,35 +357,33 @@
         <!----------------------destination section---------------------------->     
         <section id="destination" class="xl:pb-28 lg:pb-12 md:pb-11 sm:pb-10 pb-9 pt-10 max-w-[1920px] mx-auto">
             <div class="container px-3 relative">
-                <div class="flex justify-between">
-                    <div class="lg:flex max-md:flex-col">
-                        <h2
-                            class="font-bold lg:max-w-[332px] font-inter-sans xl:text-5xl lg:text-[40px] md:text-[35px] sm:text-3xl text-3xl">
-                            Destinations Most Popular</h2>
-                        <p
-                            class="font-normal lg:max-w-[430px] text-gray-500 !leading-custom-2xl font-inter-sans lg:text-xl md:text-lg text-base">
-                            Some of
-                            the
-                            most popular
-                            destinations for
-                            you visit with a view the beautiful one.</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <div
-                            class="swiper-button-prev custom-prev border-[8px] border-[#F5F5F5] rounded-full md:size-[67px] size-[60px] flex items-center justify-center absolute xl:top-[1%] lg:top-[15%] md:top-[14%] top-[20%] left-[29%] xl:left-[82%] lg:left-[75%] md:left-[68%] cursor-pointer group transition-all duration-300 hover:bg-gradient-to-br hover:from-gray-800 hover:to-black">
-                            <img src="./assets/images/svg/arrow.svg" alt="arrow" class="group-hover:hidden">
-                            <img src="./assets/images/svg/bottom-white.svg" alt="arrow-white" class="hidden group-hover:block">
-                        </div>
-                        <div
-                            class="swiper-button-next custom-next border-[8px] border-[#F5F5F5] rounded-full md:size-[67px] size-[60px] flex items-center justify-center absolute xl:top-[1%] lg:top-[15%] md:top-[14%] top-[20%] lg:right-[10%] md:right-[12%] right-[37%] xl:right-[4%] cursor-pointer group transition-all duration-300 hover:bg-gradient-to-br hover:from-gray-800 hover:to-black">
-                            <img src="./assets/images/svg/right-arrow.svg" alt="right-arrow" class="group-hover:hidden">
-                            <img src="./assets/images/svg/top-white.svg" alt="right-arrow-white"
-                                class="hidden group-hover:block">
-                        </div>
-                    </div>
-        
+        <div class="flex justify-between">
+            <div class="lg:flex max-md:flex-col">
+                <h2
+                    class="font-bold lg:max-w-[332px] !leading-custom-lg font-inter-sans xl:text-5xl lg:text-[40px] md:text-[35px] sm:text-3xl text-3xl pb-1">
+                    Destinations Most Popular</h2>
+                <p
+                    class="font-normal lg:max-w-[470px] text-[#0C111F] !leading-custom-2xl font-inter-sans lg:text-xl md:text-lg text-base xl:pb-20 lg:pb-12 md:pb-20 pb-14">
+                    Some of
+                    the
+                    most popular
+                    destinations for
+                    you visit with a view the beautiful one.</p>
+            </div>
+            <div class="flex gap-3">
+                <div
+                    class="swiper-button-prev custom-prev border-[8px] border-[#F5F5F5] rounded-full md:size-[67px] size-[60px] flex items-center justify-center absolute xl:top-[10%] lg:top-[11%] md:top-[12.5%] top-[17%] left-[29%] lg:left-[74%] md:left-[68%] cursor-pointer group transition-all duration-300 hover:bg-gradient-to-br hover:from-gray-800 hover:to-black">
+                    <img src="./assets/images/svg/arrow.svg" alt="arrow" class="group-hover:hidden">
+                    <img src="./assets/images/svg/bottom-white.svg" alt="arrow-white" class="hidden group-hover:block">
                 </div>
-                <div class="slick-Card flex xl:pt-16 lg:pt-12">
+                <div
+                    class="swiper-button-next custom-next border-[8px] border-[#F5F5F5] rounded-full md:size-[67px] size-[60px] flex items-center justify-center absolute xl:top-[10%] lg:top-[11%] md:top-[12.5%] top-[17%] lg:right-[10%] md:right-[12%] right-[30%] xl:right-[12%] cursor-pointer group transition-all duration-300 hover:bg-gradient-to-br hover:from-gray-800 hover:to-black">
+                    <img src="./assets/images/svg/right-arrow.svg" alt="right-arrow" class="group-hover:hidden">
+                    <img src="./assets/images/svg/top-white.svg" alt="right-arrow-white" class="hidden group-hover:block">
+                </div>
+            </div>
+        </div>
+        <div class="slick-Card flex mt-4 2xl:pt-16 xl:pt-4 lg:pt-12">
                     <div class="card first h-[548px] bg-light-white max-w-[354px] rounded-[30px] relative ">
                         <a class="back" href="#">
                             <div class="screen"></div>
@@ -759,9 +757,10 @@
                     </div>
                 </div>
                 <div class="xl:mt-28 lg:mt-12 md:mt-8 sm:mt-5 mt-4 text-black opacity-50 text-sm sm:flex justify-between">
-                    <p class="font-normal font-inter-sans md:text-base text-sm sm:text-left text-center">Copyright
-                        &copy;
-                        Travala 2021</p>
+                <p class="font-normal font-inter-sans md:text-base text-sm sm:text-left text-center">
+                    Copyright &copy; Travala <span id="year"></span>
+                </p>
+
                     <div
                         class="flex sm:justify-end justify-center gap-4 xl:pb-10 lg:pb-7 sm:pb-6 pb-5 sm:text-right text-center sm:mt-0 mt-3">
                         <a href="#" class="text-black font-normal font-inter-sans md:text-base text-sm">Terms &
