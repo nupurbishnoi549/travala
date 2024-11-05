@@ -77,3 +77,15 @@ mybutton.addEventListener("click", function () {
         behavior: 'smooth'
     });
 });
+const videoElement = document.querySelector('.video');
+const videoIcon = document.querySelector('.icon');
+
+videoElement.addEventListener('play', () => {
+    videoIcon.classList.add('hidden'); // Hide icon when video starts
+});
+
+videoElement.addEventListener('pause', () => {
+    videoIcon.classList.remove('hidden'); // Show icon when video pauses
+});
+
+
