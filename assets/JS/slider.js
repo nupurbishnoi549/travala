@@ -52,3 +52,17 @@ $('.slick-vertical').slick({
     ]
 });
 
+document.querySelectorAll('.video-icon').forEach((icon) => {
+    icon.addEventListener('click', function () {
+        const videoPlayer = icon.parentElement.querySelector('.video-player');
+        if (videoPlayer.classList.contains('hidden')) {
+            // Show and play the video
+            videoPlayer.classList.remove('hidden');
+            videoPlayer.play();
+        } else {
+            // Hide and pause the video
+            videoPlayer.pause();
+            videoPlayer.classList.add('hidden');
+        }
+    });
+});

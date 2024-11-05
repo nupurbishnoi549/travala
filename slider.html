@@ -353,7 +353,7 @@
     </section>
 
     <!----------------------destination section---------------------------->
-    <section class="xl:pb-28 lg:pb-12 md:pb-11 sm:pb-10 pb-9 pt-10 max-w-[1920px] mx-auto">
+    <section id="destination" class="xl:pb-28 lg:pb-12 md:pb-11 sm:pb-10 pb-9 pt-10 max-w-[1920px] mx-auto">
         <div class="container px-3 relative">
             <div class="flex justify-between">
                 <div class="lg:flex max-md:flex-col">
@@ -385,12 +385,15 @@
 
             </div>
             <div class="slick-Card flex mt-4 xl:pt-16 lg:pt-12">
-                <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
+                <div class="bg-light-white max-w-[354px] rounded-[30px] relative max-sm:mx-1">
+                    <!-- Image and overlay -->
                     <img src="./assets/images/png/beach-img.png" alt="beach-img"
                         class="xl:max-w-[354px] lg:max-w-[316px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
                     <div class="absolute top-[7%]">
                         <img src="./assets/images/png/card-bg-layer.png" alt="layer" class="w-full rounded-[30px]">
                     </div>
+
+                    <!-- Rating and Location badges -->
                     <div class="flex">
                         <div
                             class="backdrop-blur-[20px] shadow-[0px_14px_30.5px_0px_#1B33531F] max-w-[94px] flex rounded-[46px] absolute top-[4%] left-[6%] gap-4 z-20">
@@ -405,15 +408,26 @@
                             <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px] font-inter-sans">Turkey</p>
                         </div>
                     </div>
-                    <div class="absolute top-[21%] right-[40%] size-[84px] z-30 cursor-pointer">
+
+                    <!-- Icon and video setup -->
+                    <div class="absolute top-[21%] right-[40%] size-[84px] z-30 cursor-pointer video-icon">
                         <img src="./assets/images/png/icon-img.png" alt="icon-img">
                     </div>
+                    <!-- Video (initially hidden) -->
+                    <video class="hidden video-player" width="100%" controls>
+                        <source src="./assets/videos/travel-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <!-- Description content -->
                     <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
                         <h2 class="font-bold text-2xl montserrat-sans">Cappadocia</h2>
                         <p class="pt-3 font-normal text-lg max-w-[338px] text-[#0C111F99] font-inter-sans">
                             The red and orange sand of the desert are very beautiful, let's take a trip here
                         </p>
                     </div>
+
+                    <!-- Price and button -->
                     <div class="flex pt-3 px-5 pb-6 justify-between relative z-10 items-center">
                         <div class="flex-col">
                             <p class="font-normal text-lg text-[#0C111F99] font-inter-sans">Price</p>
@@ -422,11 +436,11 @@
                         </div>
                         <button
                             class="relative flex items-center whitespace-nowrap py-[9px] px-5 font-medium font-inter-sans justify-center overflow-hidden bg-custom-gradient-purple border-purple rounded-full text-lg text-white xl:shadow-2xl transition-all duration-300 before:absolute before:inset-0 before:border-0 before:border-white before:duration-200 before:ease-linear hover:bg-white xl:hover:shadow-purple-600 hover:before:border-[30px] hover:text-black">
-                            <span class="relative z-10 flex">Ticket booking
-                            </span>
+                            <span class="relative z-10 flex">Ticket booking</span>
                         </button>
                     </div>
                 </div>
+
                 <div class="bg-light-white max-w-[354px] rounded-[30px] relative">
                     <img src="./assets/images/png/baloon-img.png" alt="balloons"
                         class="xl:max-w-[354px] lg:max-w-[316px] h-[284px] rounded-tl-[30px] rounded-tr-[30px] z-10 relative">
@@ -535,7 +549,7 @@
                             <p class="pr-3 font-medium text-lg text-white leading-8 py-[6px] font-inter-sans">Turkey</p>
                         </div>
                     </div>
-                    <div class="absolute top-[21%] right-[40%] size-[84px] z-30 cursor-pointer">
+                    <div class="absolute top-[21%] right-[40%] size-[84px] z-30 ">
                         <img src="./assets/images/png/icon-img.png" alt="icon-img">
                     </div>
                     <div class="bg-white p-5 rounded-bl-[30px] rounded-br-[30px]">
@@ -628,7 +642,7 @@
             <div class="flex lg:gap-24 md:gap-8 lg:ml-0 md:ml-24 justify-center items-center">
                 <div class="slick-vertical !w-[558px] h-[302px]">
                     <div
-                        class="lg:w-[555px] !h-[260px] md:h-[238px] md:w-[300px] box bg-custom-white backdrop-blur-11 relative rounded-[20px] pl-6">
+                        class="lg:w-[555px] !h-[260px] md:h-[238px] md:w-[300px] box bg-custom-white backdrop-blur-11 relative rounded-[20px] md:pl-6 pl-3 md:pr-0 pr-3">
                         <div class="border-[12px] border-white absolute top-[-20%] rounded-[40px] left-[7%]">
                             <img src="./assets/images/png/boy-img.png" alt="boy" class="size-[63px]">
                         </div>
