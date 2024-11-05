@@ -1,37 +1,25 @@
-// menuicon JS
+// DOM Elements
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const closeIcon = document.getElementById("close-icon");
+const topBtn = document.querySelector(".top-btn");
+const heroSection = document.getElementById("hero");
 
-// Add event listeners for menu toggle
+// Toggle mobile menu
 menuBtn.addEventListener("click", () => {
-    const isMenuOpen = !mobileMenu.classList.contains("hidden");
-    menuBtn.classList.toggle('active');
-    document.body.classList.toggle("overflow-hidden");
-
-    if (isMenuOpen) {
-        mobileMenu.classList.add("hidden");
-        closeIcon.classList.add("hidden");
-        hamburgerIcon.classList.remove("hidden");
-    } else {
-        mobileMenu.classList.remove("hidden");
-        hamburgerIcon.classList.add("hidden");
-        closeIcon.classList.remove("hidden");
-    }
+    const isMenuOpen = mobileMenu.classList.toggle("hidden");
+    document.body.classList.toggle("overflow-hidden", !isMenuOpen);
+    hamburgerIcon.classList.toggle("hidden", !isMenuOpen);
+    closeIcon.classList.toggle("hidden", isMenuOpen);
 });
 
-// Function to close the mobile menu
-function closeMenu() {
-    mobileMenu.classList.add("hidden");
-    closeIcon.classList.add("hidden");
-    hamburgerIcon.classList.remove("hidden");
-    document.body.classList.remove("overflow-hidden");
-}
-document.querySelectorAll('#home-menu a, #properties-menu a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
-// destination slider
+// Close mobile menu on link click
+document.querySelectorAll('#home-menu a, #properties-menu a').forEach(link =>
+    link.addEventListener('click', () => menuBtn.click())
+);
+
+// Slick Slider Initialization
 $('.slick-Card').slick({
     dots: false,
     infinite: true,
@@ -40,30 +28,12 @@ $('.slick-Card').slick({
     prevArrow: $('.custom-prev'),
     nextArrow: $('.custom-next'),
     responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 769,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
+        { breakpoint: 1024, settings: { slidesToShow: 2 } },
+        { breakpoint: 769, settings: { slidesToShow: 2 } },
+        { breakpoint: 480, settings: { slidesToShow: 1 } }
     ]
 });
-// testimonials slider 
+
 $('.slick-vertical').slick({
     dots: false,
     infinite: true,
@@ -73,47 +43,22 @@ $('.slick-vertical').slick({
     verticalSwiping: true,
     prevArrow: $('.custom-prev-vertical'),
     nextArrow: $('.custom-next-vertical'),
-    autoplay: true,                
-    autoplaySpeed: 2000,          
-    speed: 500,                  
-    cssEase: 'linear',          
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 500,
+    cssEase: 'linear',
     responsive: [
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
+        { breakpoint: 480, settings: { slidesToShow: 1 } }
     ]
 });
 
-// back-to-top-button
-const mybutton = document.querySelector(".top-btn");
-const heroSection = document.getElementById("hero");
-
-// Initially hide the button
-mybutton.classList.add("hidden");
-
-window.addEventListener("scroll", function () {
-    const heroHeight = heroSection.offsetHeight;
-
-    // Show the button only after scrolling past the hero section
-    if (window.scrollY > heroHeight) {
-        mybutton.classList.remove("hidden");
-        mybutton.classList.add("active");
-    } else {
-        mybutton.classList.add("hidden");
-        mybutton.classList.remove("active");
-    }
+// Back-to-top button visibility and scroll to top
+window.addEventListener("scroll", () => {
+    const isPastHero = window.scrollY > heroSection.offsetHeight;
+    topBtn.classList.toggle("hidden", !isPastHero);
+    topBtn.classList.toggle("active", isPastHero);
 });
 
-mybutton.addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-
-
+topBtn.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+);
