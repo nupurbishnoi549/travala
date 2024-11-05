@@ -3,7 +3,7 @@ $('.slick-Card').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: $('.custom-prev'), 
+    prevArrow: $('.custom-prev'),
     nextArrow: $('.custom-next'),
     responsive: [
         {
@@ -66,3 +66,4 @@ document.querySelectorAll('.video-icon').forEach((icon) => {
         }
     });
 });
+
