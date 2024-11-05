@@ -79,7 +79,5 @@
         margin-left: 12px !important;
         margin-right: 12px;
     }
-        .slick-initialized .slick-slide {
-            margin-left: 0;
-        }
+    
 }
