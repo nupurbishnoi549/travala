@@ -11,11 +11,17 @@
 }
 
 #testimonials .slick-vertical .box {
-    margin-bottom: 90px;
+    margin-bottom: 150px;
 }
 
-@media (max-width:576px) {
-    .slick-initialized .slick-slide {
+@media (max-width:1024px) {
+#testimonials .slick-initialized .slick-slide {
+        margin-left: 145px !important;
+        margin-right: 12px;
+    }
+}
+@media (max-width:768px) {
+#testimonials .slick-initialized .slick-slide {
         margin-left: 12px !important;
         margin-right: 12px;
     }
