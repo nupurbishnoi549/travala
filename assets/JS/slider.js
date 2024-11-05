@@ -32,16 +32,15 @@ $('.slick-Card').slick({
 $('.slick-vertical').slick({
     dots: false,
     infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 1,          // Show only one slide at a time
+    slidesToScroll: 1,        // Scroll one slide at a time
     vertical: true,
     verticalSwiping: true,
     prevArrow: $('.custom-prev-vertical'),
     nextArrow: $('.custom-next-vertical'),
-    autoplay: true,                // Enable autoplay
-    autoplaySpeed: 2000,           // Set autoplay speed in milliseconds (2 seconds)
-    speed: 500,                    // Adjust speed of the transition (optional)
-    cssEase: 'linear',             // Smooth transition effect
+    autoplay: false,          // Disable autoplay
+    speed: 500,               // Adjust speed of the transition
+    cssEase: 'linear',        // Smooth transition effect
     responsive: [
         {
             breakpoint: 480,
