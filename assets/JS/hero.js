@@ -31,3 +31,5 @@ function closeMenu() {
 document.querySelectorAll('#home-menu a, #properties-menu a').forEach(link => {
     link.addEventListener('click', closeMenu);
 });
+//
+
