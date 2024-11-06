@@ -13,6 +13,7 @@
 #testimonials .slick-vertical .box {
     margin-bottom: 150px;
 }
+
 .card .back {
     display: flex;
     width: 100%;
@@ -33,6 +34,7 @@
 .card .back:hover .video {
     opacity: 1;
 }
+
 .card .back:hover .icon {
     opacity: 0;
 }
@@ -50,14 +52,14 @@
 }
 
 @media (max-width:768px) {
-#testimonials .slick-initialized .slick-slide {
+    #testimonials .slick-initialized .slick-slide {
         margin-left: 12px !important;
         margin-right: 12px;
-    }    
+    }
 }
 
 @media (max-width:576px) {
     .slick-initialized .slick-slide {
-            margin-left: 2px;
-        }
+        margin-left: 2px;
+    }
 }
