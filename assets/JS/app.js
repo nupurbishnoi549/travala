@@ -22,7 +22,7 @@ menuBtn.addEventListener("click", () => {
 });
 
 
-// Slick Slider Initialization
+// slick slider initialization
 $('.slick-Card').slick({
     dots: false,
     infinite: true,
