@@ -40,7 +40,6 @@ $('.slick-vertical').slick({
 // Back-to-top Button
 const mybutton = document.querySelector(".top-btn");
 const heroSection = document.getElementById("hero");
-
 window.addEventListener("scroll", () => {
     mybutton.classList.toggle("hidden", window.scrollY <= heroSection.offsetHeight);
 });
