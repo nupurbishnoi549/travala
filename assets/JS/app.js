@@ -1,30 +1,18 @@
-
-// menu js 
+// Menu Toggle
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const closeIcon = document.getElementById("close-icon");
 
 menuBtn.addEventListener("click", () => {
-    const isOpen = mobileMenu.classList.contains("translate-x-0");
-    menuBtn.classList.toggle('active');
+    const isOpen = mobileMenu.classList.toggle("translate-x-0");
     document.body.classList.toggle("overflow-hidden");
-
-    if (isOpen) {
-        mobileMenu.classList.replace("translate-x-0", "translate-x-full");
-        closeIcon.classList.add("hidden");
-        hamburgerIcon.classList.remove("hidden");
-    } else {
-        mobileMenu.classList.replace("translate-x-full", "translate-x-0");
-        hamburgerIcon.classList.add("hidden");
-        closeIcon.classList.remove("hidden");
-    }
+    hamburgerIcon.classList.toggle("hidden", isOpen);
+    closeIcon.classList.toggle("hidden", !isOpen);
 });
 
-
-// slick slider initialization
+// Slick Slider Initialization
 $('.slick-Card').slick({
-    dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -32,16 +20,13 @@ $('.slick-Card').slick({
     nextArrow: $('.custom-next'),
     responsive: [
         { breakpoint: 1024, settings: { slidesToShow: 2 } },
-        { breakpoint: 769, settings: { slidesToShow: 2 } },
         { breakpoint: 480, settings: { slidesToShow: 1 } }
     ]
 });
 
 $('.slick-vertical').slick({
-    dots: false,
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
     prevArrow: $('.custom-prev-vertical'),
@@ -49,37 +34,19 @@ $('.slick-vertical').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
-    cssEase: 'linear',
-    responsive: [
-        { breakpoint: 480, settings: { slidesToShow: 1 } }
-    ]
+    cssEase: 'linear'
 });
 
-// back-to-top-button
+// Back-to-top Button
 const mybutton = document.querySelector(".top-btn");
 const heroSection = document.getElementById("hero");
-mybutton.classList.add("hidden");
 
-window.addEventListener("scroll", function () {
-    const heroHeight = heroSection.offsetHeight;
-    if (window.scrollY > heroHeight) {
-        mybutton.classList.remove("hidden");
-        mybutton.classList.add("active");
-    } else {
-        mybutton.classList.add("hidden");
-        mybutton.classList.remove("active");
-    }
+window.addEventListener("scroll", () => {
+    mybutton.classList.toggle("hidden", window.scrollY <= heroSection.offsetHeight);
 });
-
-mybutton.addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+mybutton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // current year
 document.getElementById("year").textContent = new Date().getFullYear();
-
-
-

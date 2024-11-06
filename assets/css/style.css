@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .slick-initialized .slick-slide {
-    margin-left: 16px;
+    margin-left: 21px;
 }
 
 #testimonials .slick-list {
@@ -21,21 +21,12 @@
     position: relative;
 }
 
-.card .screen {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: 33px 33px 0 0;
-    z-index: 1;
-}
-
+.card .screen,
 .card .video {
     width: 100%;
     height: 100%;
     position: absolute;
     border-radius: 33px 33px 0 0;
-    transition: all 0.2s;
-    opacity: 0;
     z-index: 2;
 }
 
@@ -47,41 +38,24 @@
 }
 
 .card.first .screen {
-    background: url("../images/webp/beach-img.webp");
-    background-size: cover;
-    background-position: top;
+    background: url("../images/webp/beach-img.webp") top/cover;
 }
 
-.card .video {
-    background: url(https://i.gifer.com/7Jjt.gif) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 .card.second .screen {
-    background: url("../images/webp/baloon-img.webp");
-    background-size: cover;
-    background-position: top;
-}
-.card.third .screen {
-    background: url("../images/webp/road-img.webp");
-    background-size: cover;
-    background-position: top;
+    background: url("../images/webp/baloon-img.webp") top/cover;
 }
 
-@media (max-width:1024px) {
-#testimonials .slick-initialized .slick-slide {
-        margin-left: 145px !important;
-        margin-right: 12px;
-    }
+.card.third .screen {
+    background: url("../images/webp/road-img.webp") top/cover;
 }
 
 @media (max-width:768px) {
 #testimonials .slick-initialized .slick-slide {
         margin-left: 12px !important;
         margin-right: 12px;
-    }
-    
+    }    
 }
+
 @media (max-width:576px) {
     .slick-initialized .slick-slide {
             margin-left: 2px;
