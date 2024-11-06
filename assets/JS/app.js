@@ -32,7 +32,7 @@ $('.slick-vertical').slick({
     prevArrow: $('.custom-prev-vertical'),
     nextArrow: $('.custom-next-vertical'),
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     speed: 500,
     cssEase: 'linear'
 });
